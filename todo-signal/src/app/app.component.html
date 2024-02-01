@@ -1,0 +1,11 @@
+<div *ngFor="let item of todoList()">
+  <span>{{item|json}}</span>
+  <button *ngIf="!item.isDone" (click)="markItemAsDone(item.id)">Done</button>
+</div>
+
+<h1>Add new todo item</h1>
+<form [formGroup]="addNewForm">
+  <input formControlName="name"/>
+</form>
+<button (click)="addNewTodo()">Submit</button>
+{{addNewForm.value|json}}
