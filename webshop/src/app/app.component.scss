@@ -1,5 +1,18 @@
 .container{
     width: 70%;
     margin: auto;
-    background-color: yellow;
+}
+
+.category-container{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: space-between;
+}
+
+.category{
+    width: 24%;
+    padding: 10px;
 }

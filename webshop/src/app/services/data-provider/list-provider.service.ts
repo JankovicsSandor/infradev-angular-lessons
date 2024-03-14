@@ -15,4 +15,12 @@ export class ListProviderService {
   public getProducts() : Observable<IProductResponse> {
     return this.http.get<IProductResponse>(this.API_BASE_URL+"/products");
   }
+
+  public getProductCategories():Observable<string[]>{
+    return this.http.get<string[]>(this.API_BASE_URL+"/products/categories");
+  }
+
+  public getProductsByCategory(category:string):Observable<IProductResponse>{
+    return this.http.get<IProductResponse>(this.API_BASE_URL+"/products/category/"+category);
+  }
 }
