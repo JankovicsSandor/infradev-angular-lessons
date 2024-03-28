@@ -1,1 +1,34 @@
-<p>category-shop works!</p>
+<div>
+    <ul class="item-container">
+        @for(item of productList();track item.id){
+        <li class="item">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{item.title}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image [src]="item.thumbnail"
+                    [alt]="item.description">
+                <mat-card-content>
+                    <h4>{{item.description}}</h4>
+                    <table class="details">
+                        <tr>
+                            <td><b>Price:</b></td>
+                            <td>{{item.price}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Rating:</b></td>
+                            <td>{{item.rating}}</td>
+                        </tr>
+                    </table>
+                    <div class="inventory-actions">
+                        <shop-inventory-action></shop-inventory-action>
+                    </div>
+                    <div>
+                        <button mat-raised-button color="primary" class="add-to-cart-button">Add to cart</button>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,26 @@
+.item-container{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 48px;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.item{
+    width: 28%;
+}
+
+.details{
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.inventory-actions{
+    margin-bottom: 2em;
+}
+
+.add-to-cart-button{
+    width: 100%;
+}

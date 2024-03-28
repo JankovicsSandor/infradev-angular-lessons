@@ -3,13 +3,16 @@ import { ActivatedRoute } from '@angular/router';
 import { filter, switchMap, tap } from 'rxjs';
 import { IProductItem } from '../../models';
 import { ListProviderService } from '../../services/data-provider/list-provider.service';
+import { MatCardModule } from '@angular/material/card';
+import { ShopInventoryActionComponent } from "../shop-inventory-action/shop-inventory-action.component";
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'app-category-shop',
-  standalone: true,
-  imports: [],
-  templateUrl: './category-shop.component.html',
-  styleUrl: './category-shop.component.scss'
+    selector: 'category-shop',
+    standalone: true,
+    templateUrl: './category-shop.component.html',
+    styleUrl: './category-shop.component.scss',
+    imports: [MatCardModule, ShopInventoryActionComponent,MatButtonModule]
 })
 export class CategoryShopComponent {
 
